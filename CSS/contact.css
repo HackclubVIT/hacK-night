@@ -47,7 +47,7 @@
 }
 
 .media-handles span{
-    padding-top: 1.5%;
+    padding-top: 1.4%;
     padding-left: 2%;
     padding-right: 2%;
     font-size: 1.3rem;
@@ -97,7 +97,7 @@
         top: 20%;
     }
     .media-handles span{
-        padding-top: 2.5%;
+        padding-top: 2.2%;
     }
 }
 @media(max-width:865px){
@@ -159,6 +159,9 @@
     
     #discord{
         height: 35px;
+    }
+    .media-handles span{
+        padding-top: 1.9%;
     }
 }
 
