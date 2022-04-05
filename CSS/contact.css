@@ -1,0 +1,221 @@
+.contact-card{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 1.5rem auto;
+}
+.contact-card-container{
+    position: absolute;
+    top : 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 500px;
+}
+
+.contact-card-container img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contact-content{
+    position: absolute;
+    left: 15%;
+    top : 17%;
+    width: 70%;
+    bottom: 5%;
+}
+.contact-content-container{
+    height: 100%;
+}
+.contact-content-container > *{
+    margin: 15px auto;
+}
+.contact-content-container h1{
+    font-family: 'Phantom Sans',sans-serif;
+    font-weight: 700;
+    line-height: 88px;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.media-handles{
+    display: flex;
+    height : auto;
+}
+
+.media-handles span{
+    padding-top: 1.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 1.3rem;
+    font-family: 'Phantom',sans-serif;
+    letter-spacing: 2px;
+}
+.media-handles a{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.media-handles a:visited{
+    color: #fff;
+}
+
+.media-handles img{
+    height: 45px;
+    padding: 10px;
+}
+
+#insta{
+    height: 40px;
+}
+
+#mail-img{
+    height: 30px;
+}
+
+#discord{
+    height: 45px;
+}
+
+@media(max-width:1375px){
+    .contact-content{
+        left: 10%;
+    }
+}
+
+@media(max-width:1171px){
+    .contact-content{
+        left: 3%;
+    }
+}
+
+@media(max-width:1020px){
+    .contact-content{
+        top: 20%;
+    }
+    .media-handles span{
+        padding-top: 2.5%;
+    }
+}
+@media(max-width:865px){
+    .contact-content{
+        top: 26%;
+        bottom: 14%;
+    }
+    .contact-content-container h1{
+        line-height: 60px;
+    }
+
+}
+
+@media(max-width:815px){
+    .contact-content{
+        bottom: 16%;
+    }
+    .contact-content-container h1{
+        font-size: 1.6rem;
+    }
+    .media-handles span{
+        font-size: 1rem;
+        padding-top: 2.6%;
+    }
+    .contact-content-container > *{
+        margin: 10px auto;
+    }
+}
+
+@media(max-width:702px){
+    .contact-content-container h1{
+        font-size: 1.4rem;
+    }
+    .media-handles span{
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    .contact-content{
+        top:28%;
+        bottom: 20%;
+    }
+    .media-handles img{
+        padding: 5px;
+    }
+}
+
+@media(max-width:630px){
+    .contact-content{
+        top:30%;
+        bottom: 25%;
+    }
+    #insta{
+        height: 30px;
+    }
+    
+    #mail-img{
+        height: 20px;
+    }
+    
+    #discord{
+        height: 35px;
+    }
+}
+
+@media(max-width:570px){
+    .contact-content{
+        top:33%;
+    }
+    .contact-content-container h1{
+        line-height: 40px;
+    }
+}
+
+@media(max-width:550px){
+    .contact-content{
+        top: 35%;
+    }
+    #insta{
+        height: 20px;
+    }
+    
+    #mail-img{
+        height: 17px;
+    }
+    
+    #discord{
+        height: 25px;
+    }
+    .media-handles span{
+        padding-top: 2%;
+    }
+}
+
+@media(max-width:415px){
+    .contact-content{
+        top:38%;
+        width: 95%;
+    }
+    .contact-content-container{
+        width: 100%;
+    }
+    .contact-content-container h1{
+        line-height: 30px;
+        font-size: 14px;
+    }
+    .contact-content-container > *{
+        margin: 6px auto;
+    }
+    .media-handles span{
+        font-size: 12px;
+    }
+}
+
+@media(max-width:360px){
+    .contact-content{
+        top: 40%;
+    }
+    .contact-content-container h1{
+        line-height: 15px;
+    }
+}

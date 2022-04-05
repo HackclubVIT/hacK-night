@@ -1,0 +1,118 @@
+/*
+
+font-family: 'Chakra Petch', sans-serif;
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+
+.register-now{
+    width: 80%;
+    position: relative;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2.5rem auto;
+    justify-content: center;
+}
+
+.img-container{
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    bottom: 0;
+    z-index: -1;
+}
+
+.img-container > img{
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.content h1{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 3.5rem;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container .box{
+    width: 28%;
+}
+
+.button-container button{
+    padding: 10px;
+    font-family: 'Phantom Sans',sans-serif;
+    font-weight: 700;
+    height: 50px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    border-style: none;
+    border: 2px solid #FF731D;
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+@media(max-width:1185px){
+    .register-now{
+        width: 90%;
+    }
+    .button-container .box{
+        width: 38%;
+    }
+}
+
+@media(max-width:991px){
+    .register-now{
+        width: 95%;
+    }
+}
+
+@media(max-width:885px){
+    .button-container .box{
+        width: 38%;
+    }
+    .img-container > img{
+        opacity: 0.7;
+    }
+}
+
+@media(max-width:690px){
+    .content h1{
+        font-size: 2.5rem;
+    }
+    .button-container .box{
+        width: 48%;
+    }
+}
+
+@media(max-width:540px){
+    .img-container > img{
+        opacity: 0.5;
+    }
+    .button-container .box{
+        width: 58%;
+    }
+}
+@media(max-width:540px){
+    .button-container .box{
+        width: 78%;
+    }
+    .button-container button{
+        font-size: 1.2rem;
+    }
+}
+@media(max-width:300px){
+    .button-container .box{
+        width: 88%;
+    }
+}
