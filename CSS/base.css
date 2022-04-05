@@ -112,6 +112,18 @@ body {
     }
 }
 
+.content-pane-heading {
+    margin-left: 2rem;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.content-pane {
+    width: 100%;
+}
+
 /* About Section Styling */
 
 #AboutSection {
