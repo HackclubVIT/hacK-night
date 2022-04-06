@@ -1,0 +1,60 @@
+@font-face {
+    font-family: phantom;
+    src: url(../fonts/PhantomSans/Regular.woff);
+}
+
+#sponsors, #faq {
+    font-family: phantom;
+}
+
+.sponsorsHeading, .FAQHeading {
+    font-family: 'Chakra Petch';
+    font-size: 300%;
+    margin-left: 5%;
+}
+
+.sponsor-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.imgs {
+    padding-left: 10%;
+    margin: 2%;
+    width: 40%;
+}
+
+#faq, #sponsors {
+    margin: 5%;
+}
+
+details {
+    padding: 0 5% 2% 5%;
+}
+
+details>* {
+    font-size: 1.2rem;
+    padding: 1.4rem;
+    background: #FFC78D;
+    color: white;
+    margin: 0;
+}
+
+details > p {
+    color: black;
+}
+
+summary {
+    background: #000000;
+    border: 3px solid #F96232;
+    padding: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media screen and (max-aspect-ratio: 4/3) {
+    .sponsor-container {
+        flex-direction: column;
+    }
+}
