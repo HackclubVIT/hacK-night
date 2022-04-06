@@ -12,26 +12,30 @@
     <link rel="stylesheet" href="CSS/event-details.css">
     <link rel="stylesheet" href="CSS/sponsors_faq.css">
     <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
 
     <!-- Chakra Petch font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="body-wrapper is-flex column align-center">
-        <nav class="page-nav">
-            <ul class="is-flex">
-                <li>About</li>
-                <li>Schedule</li>
-                <li>Speakers</li>
-                <li>Prizes</li>
-                <li>Sponsors</li>
-                <li>FAQs</li>
-                <li>Register</li>
-            </ul>
-        </nav>
+        <nav class="topnav" id="myTopnav" onclick="hideResponse()">
+            <a href="#about">About</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#speakers">Speakers</a>
+            <a href="#prizes">Prizes</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#faq">FAQs</a>
+            <a href="#register">Register</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars" onclick="hideResponse()"></i>
+            </a>
+          </nav>
         <section id="about" class="is-flex column align-center">
             <svg width="887" height="225" viewBox="0 0 887 225" fill="none" xmlns="http://www.w3.org/2000/svg"
                 id="event-logo">
@@ -336,5 +340,5 @@
         </ul>
     </footer>
 </body>
-
+    <script src="JS/navbar.js"></script>
 </html>
