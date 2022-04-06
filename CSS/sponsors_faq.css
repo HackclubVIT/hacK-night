@@ -5,12 +5,14 @@
 
 #sponsors, #faq {
     font-family: phantom;
+    margin-top: 4%;
 }
 
 .sponsorsHeading, .FAQHeading {
     font-family: 'Chakra Petch';
-    font-size: 300%;
+    font-size: 4.5vw;
     margin-left: 5%;
+    margin-top: 4%;
 }
 
 .sponsor-container {

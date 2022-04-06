@@ -1,3 +1,8 @@
+@font-face {
+    font-family: phantom;
+    src: url(../fonts/PhantomSans/Regular.woff);
+}
+
 .list-that-is-not-ugly {
     list-style: none;
     margin: 0 0 0 0;
@@ -11,6 +16,7 @@
 .event-details-content {
     gap: 13vw;
     margin: 0 6vw;
+    padding: 2% 0 0 0;
 }
 
 .event-details-list {
@@ -18,5 +24,6 @@
 }
 
 .event-details-list-item {
-    font-size: 4vw;
+    font-family: phantom;
+    font-size: 2vw;
 }

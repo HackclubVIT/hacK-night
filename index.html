@@ -12,25 +12,29 @@
     <link rel="stylesheet" href="CSS/event-details.css">
     <link rel="stylesheet" href="CSS/sponsors_faq.css">
     <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
 
     <!-- Chakra Petch font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="body-wrapper is-flex column align-center">
-        <nav class="page-nav">
-            <ul class="is-flex">
-                <li>About</li>
-                <li>Schedule</li>
-                <li>Speakers</li>
-                <li>Prizes</li>
-                <li>Sponsors</li>
-                <li>FAQs</li>
-                <li>Register</li>
-            </ul>
+        <nav class="topnav" id="myTopnav" onclick="hideResponse()">
+            <a href="#about">About</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#speakers">Speakers</a>
+            <a href="#prizes">Prizes</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#faq">FAQs</a>
+            <a href="#register">Register</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars" onclick="hideResponse()"></i>
+            </a>
         </nav>
         <section id="about" class="is-flex column align-center">
             <svg width="945" height="231" viewBox="0 0 945 231" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -87,23 +91,27 @@
             <div class="is-flex event-details-content">
                 <img src="../assets/img/coding.png" width="40%">
                 <ul class="is-flex column list-that-is-not-ugly event-details-list">
-                    <li class="event-details-list-item">Date: 11th April - 13th April</li>
-                    <li class="event-details-list-item">Time: 11th April 5:30pm to 13th April 7:30pm</li>
-                    <li class="event-details-list-item">Entry Fee: 200 per person</li>
-                    <li class="event-details-list-item">Team Size: 3-4 Members</li>
-                    <li class="event-details-list-item">Venue: MG Auditorium</li>
+                    <li class="event-details-list-item"><strong>Date:</strong> 11th April - 13th April</li>
+                    <li class="event-details-list-item"><strong>Time:</strong> 11th April 5:30pm to 13th April 7:30pm
+                    </li>
+                    <li class="event-details-list-item"><strong>Entry Fee:</strong> 200 per person</li>
+                    <li class="event-details-list-item"><strong>Team Size:</strong> 3-4 Members</li>
+                    <li class="event-details-list-item"><strong>Venue:</strong> MG Auditorium</li>
                 </ul>
             </div>
         </section>
     </div>
-    <div style="font-family: Chakra Petch;font-weight: bold;font-size:600%;margin:5%">
+    <div style="font-family: Chakra Petch;font-weight: bold;font-size:4.5vw;margin-left:8%">
         Guidelines
         <br>
     </div>
     <div class="b1">
         <br><br>
+        <img src="assets/img/ellipse.svg" style="width:10%;margin-left:2.5%;">
+        <hr>
+        <img id="img1" src="assets/img/codelines.svg" align="right" style="margin-top:5%; width:28%;">
         <div class="guideline-container">
-            <ol>
+            <ul>
                 <li class="Guidelines-item">The participants are required to gather at the aforementioned venue before
                     6:00pm with their VIT ID cards.</li>
                 <li class="Guidelines-item">We will issue event-specific ID cards to all participants and assign
@@ -120,21 +128,21 @@
                 <li class="Guidelines-item">Only VIT Chennai students can register for the event.</li>
                 <li class="Guidelines-item">Leaving the hackathon premises without permit will cause direct
                     disqualification of the team.</li>
-            </ol>
+            </ul>
         </div>
-        <img src="assets/img/ellipse.svg" style="width:10%;margin-left:2.5%;">
-        <hr>
-        <img id="img1" src="assets/img/codelines.svg" align="right" style="margin-top:5%; width:28%;">
     </div>
     <div>
-        <img src="assets/img/star.svg">
+        <img src="assets/img/star.svg" class="star-image">
     </div>
-    <div style="font-family: Chakra Petch;font-weight: bold;font-size:600%;margin:5%;">
+    <div style="font-family: Chakra Petch;font-weight: bold;font-size:4.5em; margin-left: 10%;">
         Rounds and Rules
         <br>
     </div>
     <div class="b1">
         <br><br>
+        <img src="assets/img/ellipse.svg" style="width:10%;margin-left:2.5%;">
+        <hr>
+        <img id="img2" src="assets/img/codelines.svg" align="right" style="margin-top:5%;width:28%;">
         <div class="roundsrules-container">
             <p>There will be a total of <strong>2</strong> rounds.</p>
             <ol>
@@ -150,23 +158,20 @@
                 </ul>
             </ol>
         </div>
-        <img src="assets/img/ellipse.svg" style="width:10%;margin-left:2.5%;">
-        <hr>
-        <img id="img2" src="assets/img/codelines.svg" align="right" style="margin-top:5%;width:28%;">
     </div>
-    <div style="font-family: Chakra Petch;font-weight: bold;font-size:600%;margin:5%;">
+    <div style="font-family: Chakra Petch;font-weight: bold;font-size:4.5vw;margin-left:8%;">
         Prizes
         <br>
     </div>
     <div class="b1">
         <br><br>
+        <img src="assets/img/ellipse.svg" style="width:10%;margin-left:2.5%;">
+        <hr>
+        <img src="assets/img/prize vector.png" align="right" style="width:20%; margin-right: 4%; margin-top: 4%">
+        <br><br>
         <p class="PrizeP">Position-1: Rs. 80,000</p>
         <p class="PrizeP">Position-2: Rs. 60,000</p>
         <p class="PrizeP">Position-3: Rs. 40,000</p>
-        <img src="assets/img/ellipse.svg" style="width:10%;margin-left:2.5%;">
-        <hr>
-        <img src="assets/img/prize vector.png" align="right" style="width:60%;margin-top:20%;">
-
     </div>
 
     <!-- Sponsors -->
@@ -498,6 +503,8 @@
             </div>
         </ul>
     </footer>
+
+    <script src="JS/navbar.js"></script>
 </body>
 
 </html>
