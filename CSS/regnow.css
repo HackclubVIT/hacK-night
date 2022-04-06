@@ -6,7 +6,7 @@ font-family: 'Chakra Petch', sans-serif;
 
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
 
-.register-now{
+.register-now {
     width: 80%;
     position: relative;
     min-height: 250px;
@@ -17,7 +17,7 @@ font-family: 'Chakra Petch', sans-serif;
     justify-content: center;
 }
 
-.img-container{
+.img-container {
     position: absolute;
     top: 0;
     right: 1rem;
@@ -25,30 +25,37 @@ font-family: 'Chakra Petch', sans-serif;
     z-index: -1;
 }
 
-.img-container > img{
+.img-container>img {
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.content h1{
+.content h1 {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 3.5rem;
 }
 
-.button-container{
+.content {
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.button-container .box{
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container .box {
     width: 28%;
 }
 
-.button-container button{
+.button-container button {
     padding: 10px;
-    font-family: 'Phantom Sans',sans-serif;
+    font-family: 'Phantom Sans', sans-serif;
     font-weight: 700;
     height: 50px;
     font-size: 1.3rem;
@@ -62,57 +69,88 @@ font-family: 'Chakra Petch', sans-serif;
     white-space: nowrap;
 }
 
-@media(max-width:1185px){
-    .register-now{
+#registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 40ch;
+    max-width: 80ch;
+    font-family: "Phantom Sans", sans-serif;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0.5rem;
+}
+
+.form-group:not(.submit-group):last-of-type {
+    margin-bottom: none;
+}
+
+.form-group.submit-group {
+    justify-content: flex-end;
+}
+
+@media(max-width:1185px) {
+    .register-now {
         width: 90%;
     }
-    .button-container .box{
+
+    .button-container .box {
         width: 38%;
     }
 }
 
-@media(max-width:991px){
-    .register-now{
+@media(max-width:991px) {
+    .register-now {
         width: 95%;
     }
 }
 
-@media(max-width:885px){
-    .button-container .box{
+@media(max-width:885px) {
+    .button-container .box {
         width: 38%;
     }
-    .img-container > img{
+
+    .img-container>img {
         opacity: 0.7;
     }
 }
 
-@media(max-width:690px){
-    .content h1{
+@media(max-width:690px) {
+    .content h1 {
         font-size: 2.5rem;
     }
-    .button-container .box{
+
+    .button-container .box {
         width: 48%;
     }
 }
 
-@media(max-width:540px){
-    .img-container > img{
+@media(max-width:540px) {
+    .img-container>img {
         opacity: 0.5;
     }
-    .button-container .box{
+
+    .button-container .box {
         width: 58%;
     }
 }
-@media(max-width:540px){
-    .button-container .box{
+
+@media(max-width:540px) {
+    .button-container .box {
         width: 78%;
     }
-    .button-container button{
+
+    .button-container button {
         font-size: 1.2rem;
     }
 }
-@media(max-width:300px){
-    .button-container .box{
+
+@media(max-width:300px) {
+    .button-container .box {
         width: 88%;
     }
 }
