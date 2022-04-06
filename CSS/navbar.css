@@ -1,0 +1,72 @@
+@font-face {
+    font-family: phantom;
+    src: url(../fonts/PhantomSans/Regular.woff);
+}
+
+.topnav {
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: inline-block;
+    z-index: 1000;
+}
+
+.topnav a {
+    font-family: phantom;
+    color: white;
+    float: left;
+    display: inline;
+    text-align: center;
+    padding: 6px 16px;
+    margin-top: 4%;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .nav {
+        position: absolute;
+        width: 100%;
+        right: 0;
+    }
+    .topnav {
+        width: 100%;
+        overflow: hidden;
+        background-color: transparent;
+        -webkit-backdrop-filter: blur(25px);
+        backdrop-filter: blur(25px);
+        z-index: 1000;
+        position: absolute;
+        right: 0;
+    }
+
+    .topnav a {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
