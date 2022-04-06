@@ -230,3 +230,10 @@ body {
     object-position: center;
     max-width: 100%;
 }
+
+#payment-code-600,
+#payment-code-800 {
+    object-fit: contain;
+    object-position: center;
+    max-width: 48%;
+}
