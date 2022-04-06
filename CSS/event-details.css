@@ -16,6 +16,7 @@
 .event-details-content {
     gap: 13vw;
     margin: 0 6vw;
+    padding: 2% 0 0 0;
 }
 
 .event-details-list {
