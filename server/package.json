@@ -22,7 +22,6 @@
     },
     "dependencies": {
         "better-sqlite3": "^7.5.0",
-        "express": "^4.17.3",
-        "yup": "^0.32.11"
+        "express": "^4.17.3"
     }
 }
