@@ -253,196 +253,139 @@
     <div class="register-now">
         <div class="content">
             <h1>Register Now</h1>
-            <form id="registration-form">
+            <form id="registration-form" action="http://localhost:9000/api/register" method="POST">
                 <fieldset>
                     <legend>Team info</legend>
                     <div class="form-group">
                         <label for="reg-form-team-name">Team name</label>
-                        <input type="text" required name="reg-form-team-name" id="reg-form-team-name">
+                        <input type="text" required name="team_name" id="reg-form-team-name" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-team-size">Team size</label>
-                        <input type="number" required name="reg-form-team-size" id="reg-form-team-size" value=3 min=3
-                            max=4>
+                        <input type="number" required name="team_size" id="reg-form-team-size" value="3" min="3" max="4" />
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>Participant 1 details</legend>
                     <div class="form-group">
                         <label for="reg-form-p1-name">Participant 1 name</label>
-                        <input type="text" required name="reg-form-p1-name" id="reg-form-p1-name">
+                        <input type="text" required name="participants[0][participant_name]" id="reg-form-p1-name" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p1-regno">Participant 1 reg. no</label>
-                        <input type="text" required name="reg-form-p1-regno" id="reg-form-p1-regno">
+                        <input type="text" required name="participants[0][participant_regno]" id="reg-form-p1-regno" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p1-phone">Participant 1 phone number</label>
-                        <input type="tel" required name="reg-form-p1-phone" id="reg-form-p1-phone">
+                        <input type="tel" required name="participants[0][participant_phone]" id="reg-form-p1-phone" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p1-email">Participant 1 email</label>
-                        <input type="email" required name="reg-form-p1-email" id="reg-form-p1-email">
+                        <input type="email" required name="participants[0][participant_email]" id="reg-form-p1-email" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p1-is-dayscholar">Is this a day scholar?</label>
-                        <input type="checkbox" required name="reg-form-p1-is-dayscholar" id="reg-form-p1-is-dayscholar">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="reg-form-p1-is-nonveg">Non-vegetarian meal?</label>
-                        <input type="checkbox" required name="reg-form-p1-is-nonveg" id="reg-form-p1-is-nonveg">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="reg-form-p1-gender">Gender</label>
-                        <select required name="reg-form-p1-gender" id="reg-form-p1-gender">
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Gender non-conforming/other</option>
-                            <option>Prefer not to say</option>
-                        </select>
+                        <input type="checkbox" name="participants[0][is_day_scholar]" id="reg-form-p1-is-dayscholar" />
                     </div>
                 </fieldset>
-
+            
                 <fieldset>
                     <legend>Participant 2 details</legend>
                     <div class="form-group">
                         <label for="reg-form-p2-name">Participant 2 name</label>
-                        <input type="text" required name="reg-form-p2-name" id="reg-form-p2-name">
+                        <input type="text" required name="participants[1][participant_name]" id="reg-form-p2-name" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p2-regno">Participant 2 reg. no</label>
-                        <input type="text" required name="reg-form-p2-regno" id="reg-form-p2-regno">
+                        <input type="text" required name="participants[1][participant_regno]" id="reg-form-p2-regno" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p2-phone">Participant 2 phone number</label>
-                        <input type="tel" required name="reg-form-p2-phone" id="reg-form-p2-phone">
+                        <input type="tel" required name="participants[1][participant_phone]" id="reg-form-p2-phone" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p2-email">Participant 2 email</label>
-                        <input type="email" required name="reg-form-p2-email" id="reg-form-p2-email">
+                        <input type="email" required name="participants[1][participant_email]" id="reg-form-p2-email" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p2-is-dayscholar">Is this a day scholar?</label>
-                        <input type="checkbox" required name="reg-form-p2-is-dayscholar" id="reg-form-p2-is-dayscholar">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="reg-form-p2-is-nonveg">Non-vegetarian meal?</label>
-                        <input type="checkbox" required name="reg-form-p2-is-nonveg" id="reg-form-p2-is-nonveg">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="reg-form-p2-gender">Gender</label>
-                        <select required name="reg-form-p2-gender" id="reg-form-p2-gender">
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Gender non-conforming/other</option>
-                            <option>Prefer not to say</option>
-                        </select>
+                        <input type="checkbox" name="participants[1][is_day_scholar]" id="reg-form-p2-is-dayscholar" />
                     </div>
                 </fieldset>
-
+            
                 <fieldset>
                     <legend>Participant 3 details</legend>
                     <div class="form-group">
                         <label for="reg-form-p3-name">Participant 3 name</label>
-                        <input type="text" required name="reg-form-p3-name" id="reg-form-p3-name">
+                        <input type="text" required name="participants[2][participant_name]" id="reg-form-p3-name" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p3-regno">Participant 3 reg. no</label>
-                        <input type="text" required name="reg-form-p3-regno" id="reg-form-p3-regno">
+                        <input type="text" required name="participants[2][participant_regno]" id="reg-form-p3-regno" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p3-phone">Participant 3 phone number</label>
-                        <input type="tel" required name="reg-form-p3-phone" id="reg-form-p3-phone">
+                        <input type="tel" required name="participants[2][participant_phone]" id="reg-form-p3-phone" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p3-email">Participant 3 email</label>
-                        <input type="email" required name="reg-form-p3-email" id="reg-form-p3-email">
+                        <input type="email" required name="participants[2][participant_email]" id="reg-form-p3-email" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p3-is-dayscholar">Is this a day scholar?</label>
-                        <input type="checkbox" required name="reg-form-p3-is-dayscholar" id="reg-form-p3-is-dayscholar">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="reg-form-p3-is-nonveg">Non-vegetarian meal?</label>
-                        <input type="checkbox" required name="reg-form-p3-is-nonveg" id="reg-form-p3-is-nonveg">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="reg-form-p3-gender">Gender</label>
-                        <select required name="reg-form-p3-gender" id="reg-form-p3-gender">
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Gender non-conforming/other</option>
-                            <option>Prefer not to say</option>
-                        </select>
+                        <input type="checkbox" name="participants[2][is_day_scholar]" id="reg-form-p3-is-dayscholar" />
                     </div>
                 </fieldset>
-
+            
                 <fieldset>
                     <legend>Participant 4 details (optional)</legend>
                     <div class="form-group">
                         <label for="reg-form-p4-name">Participant 4 name</label>
-                        <input type="text" name="reg-form-p4-name" id="reg-form-p4-name">
+                        <input type="text" name="optional_participant[participant_name]" id="reg-form-p4-name" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p4-regno">Participant 4 reg. no</label>
-                        <input type="text" name="reg-form-p4-regno" id="reg-form-p4-regno">
+                        <input type="text" name="optional_participant[participant_regno]" id="reg-form-p4-regno" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p4-phone">Participant 4 phone number</label>
-                        <input type="tel" name="reg-form-p4-phone" id="reg-form-p4-phone">
+                        <input type="tel" name="optional_participant[participant_phone]" id="reg-form-p4-phone" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p4-email">Participant 4 email</label>
-                        <input type="email" name="reg-form-p4-email" id="reg-form-p4-email">
+                        <input type="email" name="optional_participant[participant_email]" id="reg-form-p4-email" />
                     </div>
                     <div class="form-group">
                         <label for="reg-form-p4-is-dayscholar">Is this a day scholar?</label>
-                        <input type="checkbox" name="reg-form-p4-is-dayscholar" id="reg-form-p4-is-dayscholar">
-                    </div>
-                    <div class="form-group">
-                        <label for="reg-form-p4-is-nonveg">Non-vegetarian meal?</label>
-                        <input type="checkbox" name="reg-form-p4-is-nonveg" id="reg-form-p4-is-nonveg">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="reg-form-p4-gender">Gender</label>
-                        <select name="reg-form-p4-gender" id="reg-form-p4-gender">
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Gender non-conforming/other</option>
-                            <option>Prefer not to say</option>
-                        </select>
+                        <input type="checkbox" name="optional_participant[is_day_scholar]" id="reg-form-p4-is-dayscholar" />
                     </div>
                 </fieldset>
-
+            
                 <fieldset>
                     <legend>Payment details</legend>
-                    <p>Scan one of the QR codes below to pay, then put your UPI transaction ID in the field below.</p>
+                    <p>
+                        Scan one of the QR codes below to pay, then put your UPI transaction ID in the field
+                        below.
+                    </p>
                     <ul>
                         <li>Fee for 3-member teams: ₹600</li>
                         <li>Fee for 4-member teams: ₹800</li>
                     </ul>
                     <div class="form-group">
                         <img id="payment-code-600" alt="payment QR code for 3-member teams (pay rupees 600)"
-                            src="../assets/img/payment-qr-600rs.webp">
+                            src="../assets/img/payment-qr-600rs.webp" />
                         <img id="payment-code-800" alt="payment QR code for 4-member teams (pay rupees 800)"
-                            src="../assets/img/payment-qr-800rs.webp">
+                            src="../assets/img/payment-qr-800rs.webp" />
                     </div>
-
+            
                     <div class="form-group">
                         <label for="reg-form-transaction-id">Transaction ID</label>
-                        <input type="text" required name="reg-form-transaction-id" id="reg-form-transaction-id">
+                        <input type="text" required name="trxn_id" id="reg-form-transaction-id" />
                     </div>
                 </fieldset>
-
+            
                 <div class="form-group submit-group">
-                    <input type="submit" value="Register">
+                    <input type="submit" value="Register" />
                 </div>
             </form>
         </div>

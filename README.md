@@ -2,6 +2,16 @@
 
 The official website for HackClub VIT Chennai's `hacK-night` event.
 
+## Instructions to run the server
+
+Assuming `/server` was deployed and is the current directory
+
+`npm install --production`
+
+`npm run build`
+
+`npm run start` (or) simply execute the file `bin/www`
+
 ## Contributing guide
 
 - Use four spaces for indentation.
