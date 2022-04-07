@@ -1,13 +1,8 @@
-@font-face {
-    font-family: phantom;
-    src: url(../fonts/PhantomSans/Regular.woff);
-}
-
 .body-section {
     width: 80vw;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    font-family: phantom;
+    font-family: 'Phantom Sans', sans-serif;
 }
 
 footer {
@@ -32,7 +27,7 @@ footer ul.container {
 }
 
 #hc {
-    font-family: phantom;
+    font-family: 'Phantom Sans', sans-serif;
 }
 
 .footer-socials-wrapper {
@@ -78,7 +73,7 @@ footer ul.container {
 
 .footer-links {
     padding: 1em;
-    font-family: phantom;
+    font-family: 'Phantom Sans', sans-serif;
 }
 
 .footer-links .comm {

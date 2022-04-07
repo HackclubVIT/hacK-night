@@ -1,14 +1,11 @@
-@font-face {
-    font-family: phantom;
-    src: url(../fonts/PhantomSans/Regular.woff);
-}
-
-#sponsors, #faq {
-    font-family: phantom;
+#sponsors,
+#faq {
+    font-family: 'Phantom Sans';
     margin-top: 4%;
 }
 
-.sponsorsHeading, .FAQHeading {
+.sponsorsHeading,
+.FAQHeading {
     font-family: 'Chakra Petch';
     font-size: 4.5vw;
     margin-left: 5%;
@@ -21,12 +18,11 @@
 }
 
 .imgs {
-    padding-left: 10%;
-    margin: 2%;
     width: 40%;
 }
 
-#faq, #sponsors {
+#faq,
+#sponsors {
     margin: 5%;
 }
 
@@ -42,7 +38,7 @@ details>* {
     margin: 0;
 }
 
-details > p {
+details>p {
     color: black;
 }
 
