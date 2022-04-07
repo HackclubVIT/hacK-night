@@ -23,6 +23,7 @@ const participantValidator = yup.object({
     participant_phone: yup.string().required("Participant phone number is required"),
     participant_email: yup.string().email().required("Participant email is required"),
     is_day_scholar: yup.string(),
+    hostel_block: yup.string(),
 });
 
 const participantsValidator = yup.array().length(3).of(participantValidator);
