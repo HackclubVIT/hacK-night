@@ -15,10 +15,8 @@
 .sponsor-container {
     display: flex;
     flex-direction: row;
-}
-
-.imgs {
-    width: 40%;
+    align-items: center;
+    justify-content: center;
 }
 
 #faq,

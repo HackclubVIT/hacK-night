@@ -38,6 +38,11 @@ body {
     color: white;
 }
 
+h2 {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+}
+
 .page-nav {
     margin-top: 1.75rem;
 }
@@ -223,12 +228,24 @@ h2 {
 
 #registration-form>fieldset {
     margin: 0.5rem;
-    max-width: 90%;
+    min-width: 30%;
+    max-width: 60%;
     background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem;
+    border: none;
 }
 
 section:not(#about):not(.register-now) {
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-top: 3rem;
+    width: calc(100% - 3rem);
+}
+
+
+
+.prize-details-list-item {
+    font-family: 'Phantom Sans';
+    font-size: 2rem;
 }
 
 @media screen and (max-aspect-ratio: 1/1) {
@@ -269,5 +286,31 @@ section:not(#about):not(.register-now) {
         width: auto;
         padding: 0;
         font-size: 1.4rem;
+    }
+
+    section:not(#about):not(.register-now) {
+        padding-left: 0.5rem;
+        padding-top: 0.5rem;
+        width: calc(100% - 1rem);
+    }
+
+    #payment-code-600,
+    #payment-code-800 {
+        max-width: 100%;
+    }
+
+    #registration-form>fieldset {
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        padding-block-start: 0rem;
+        padding-inline-start: 0rem;
+        padding-inline-end: 0.5rem;
+        max-width: 90%;
+        padding-block-end: 0.5rem;
+    }
+
+    .prize-details-list-item {
+        font-family: 'Phantom Sans';
+        font-size: 1.6rem;
     }
 }

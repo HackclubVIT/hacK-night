@@ -73,10 +73,43 @@ font-family: 'Chakra Petch', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 40ch;
-    max-width: 80ch;
+    max-width: 60ch;
     font-family: "Phantom Sans", sans-serif;
     font-size: 1.4rem;
+}
+
+#registration-form input:not([type=checkbox]),
+select {
+    min-width: 20ch;
+    background-color: #ffc78d;
+}
+
+input,
+select {
+    cursor: pointer;
+}
+
+#registration-form input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#registration-form input[type=checkbox]:checked::after {
+    content: "Yes";
+    color: white;
+    background-color: rgb(99, 99, 214);
+
+}
+
+#registration-form input[type=checkbox]::after {
+    content: "No";
+    color: white;
+    background-color: rgb(185, 81, 81);
+    text-align: center;
+    width: 100%;
+    padding: 0.2rem;
+    font-size: 1rem;
 }
 
 .form-group {
