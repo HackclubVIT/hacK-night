@@ -2,8 +2,9 @@ PRAGMA foreign_keys = 1;
 
 CREATE TABLE IF NOT EXISTS teams(
     team_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    team_name TEXT NOT NULL,
-    trxn_id TEXT NOT NULL
+    team_name TEXT UNIQUE NOT NULL,
+    trxn_id TEXT NOT NULL,
+    team_size INTEGER NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS participants(
