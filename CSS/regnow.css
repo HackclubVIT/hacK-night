@@ -84,7 +84,7 @@ select {
     background-color: #ffc78d;
 }
 
-input,
+input:not([type=text]):not([type=number]):not([type=email]):not([type=tel]),
 select {
     cursor: pointer;
 }
@@ -110,6 +110,14 @@ select {
     width: 100%;
     padding: 0.2rem;
     font-size: 1rem;
+}
+
+#registration-form input[type=checkbox][id$="is-vegetarian"]:checked::after {
+    content: "Vegetarian";
+}
+
+#registration-form input[type=checkbox][id$="is-vegetarian"]::after {
+    content: "Non-vegetarian";
 }
 
 .form-group {

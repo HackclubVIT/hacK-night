@@ -1,6 +1,5 @@
 import { RequestHandler } from "express";
 import { insert } from "./db";
-import { isNonDefault, wrangleCheckbox } from "./utils";
 import * as yup from "yup";
 
 const teamValidator = yup.object({
@@ -24,6 +23,7 @@ const participantValidator = yup.object({
     participant_email: yup.string().email().required("Participant email is required"),
     is_day_scholar: yup.string(),
     hostel_block: yup.string(),
+    is_vegetarian: yup.string(),
 });
 
 const participantsValidator = yup.array().length(3).of(participantValidator);
