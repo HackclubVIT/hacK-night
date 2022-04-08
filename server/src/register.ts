@@ -45,8 +45,9 @@ export const register: RequestHandler = (req, res, next) => {
         }
 
         insert(team, participants);
-
-        res.send("<h1>Registered Successfully</h1>");
+        res.sendFile("html/register-success.html", {
+            root: process.cwd()
+        })
     } catch (e: any) {
         if (e.name === "ValidationError")
             return res.send(`<h1>Invalid registration details</h1> <p>${e.errors.join()}</p>`);
