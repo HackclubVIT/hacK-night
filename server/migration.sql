@@ -16,5 +16,6 @@ CREATE TABLE IF NOT EXISTS participants(
     is_day_scholar INTEGER NOT NULL,
     hostel_block TEXT,
     is_vegetarian INTEGER NOT NULL,
+    gender TEXT,
     team_id INTEGER REFERENCES teams(team_id)
 );
