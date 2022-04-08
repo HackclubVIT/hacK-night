@@ -24,6 +24,7 @@ const participantValidator = yup.object({
     is_day_scholar: yup.string(),
     hostel_block: yup.string(),
     is_vegetarian: yup.string(),
+    gender: yup.string()
 });
 
 const participantsValidator = yup.array().length(3).of(participantValidator);
