@@ -12,7 +12,7 @@ const team_prepared_insert = db.prepare(
 const insert_team = (team: any) => team_prepared_insert.run(team);
 
 const participant_prepared_insert = db.prepare(
-    "INSERT INTO participants(participant_name, participant_regno, participant_phone, participant_email, is_day_scholar, hostel_block, is_vegetarian, team_id) VALUES(@participant_name, @participant_regno, @participant_phone, @participant_email, @gender, @is_day_scholar, @hostel_block, @is_vegetarian, @team_id)"
+    "INSERT INTO participants(participant_name, participant_regno, participant_phone, participant_email, gender, is_day_scholar, hostel_block, is_vegetarian, team_id) VALUES(@participant_name, @participant_regno, @participant_phone, @participant_email, @gender, @is_day_scholar, @hostel_block, @is_vegetarian, @team_id)"
 );
 
 const insert_participants = (participants: any[]) =>
