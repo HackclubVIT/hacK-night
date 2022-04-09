@@ -15,6 +15,27 @@ const participant_prepared_insert = db.prepare(
     "INSERT INTO participants(participant_name, participant_regno, participant_phone, participant_email, gender, is_day_scholar, hostel_block, is_vegetarian, team_id) VALUES(@participant_name, @participant_regno, @participant_phone, @participant_email, @gender, @is_day_scholar, @hostel_block, @is_vegetarian, @team_id)"
 );
 
+export const get_registration_counts = () => {
+    const teams = db.prepare("select count(team_id) as team_count from teams;").get();
+    const participants = db.prepare("select count(participant_name) as participant_count from participants;").get();
+
+    return {
+        ...teams, ...participants
+    }
+}
+
+export const get_participants = () => {
+    return db
+        .prepare("select participant_name, participant_regno, participant_phone, participant_email, gender, is_day_scholar, hostel_block, is_vegetarian, team_id from participants;")
+        .all();
+}
+
+export const get_teams = () => {
+    return db
+        .prepare("select team_id, team_name, trxn_id, team_size from teams;")
+        .all();
+}
+
 const insert_participants = (participants: any[]) =>
     participants.forEach(participant => participant_prepared_insert.run(participant));
 

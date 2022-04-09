@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacknight Admin Dashboard</title>
+    <style>
+        fieldset {
+            max-width: 70ch;
+        }
+
+        .data-group {
+            max-width: 60ch;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #cf-alert {
+            width: 40%;
+            background: white;
+            border-radius: 0.2rem;
+            max-height: 100%;
+            overflow: auto;
+        }
+
+        #alert-header,
+        #alert-footer {
+            padding: 1rem;
+        }
+
+        #alert-body>input {
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        #alert-body {
+            padding-left: 1rem;
+        }
+
+        #alert-footer {
+            text-align: right;
+        }
+
+        #alert-header {
+            font-weight: bold;
+        }
+
+        #alert-ok {
+            color: white;
+            background-color: #007cdf;
+            border: none;
+            padding: 0.5rem;
+            min-width: 10ch;
+            border-radius: 0.2rem;
+        }
+
+        #alert-cancel {
+            color: white;
+            background-color: #978e0f;
+            border: none;
+            padding: 0.5rem;
+            min-width: 10ch;
+            border-radius: 0.2rem;
+        }
+
+        #alert-cancel,
+        #alert-ok {
+            cursor: pointer;
+            margin: 0.2rem;
+        }
+
+        @media not all and (hover: none) {
+
+            #alert-cancel:hover,
+            #alert-ok:hover {
+                filter: brightness(1.2);
+            }
+        }
+
+        @media only screen and (max-aspect-ratio: 1/1) {
+            #cf-alert {
+                width: 70%;
+            }
+        }
+
+        @media only screen and (max-aspect-ratio: 9/16) {
+            #cf-alert {
+                width: 90%;
+            }
+        }
+
+        #export-participants-form>input[type=text] {
+            display: none;
+        }
+
+        #export-teams-form>input[type=text] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Authentication</legend>
+        <div class="data-group">
+            <strong>Password</strong>
+            <div id="password-status">not set</div>
+        </div>
+
+        <div class="data-group">
+            <strong>Change password</strong>
+            <a id="change-password" href="javascript:void(0)">...</a>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Summary</legend>
+        <div class="data-group">
+            <strong>Participant count</strong>
+            <div id="participant-count">0</div>
+        </div>
+        <div class="data-group">
+            <strong>Team count</strong>
+            <div id="team-count">0</div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Export</legend>
+        <div class="data-group">
+            <strong>Participants</strong>
+            <form method="POST" id=export-participants-form action="/api/admin/export/participants">
+                <input type="text" name="key">
+                <input type="submit" value="Export">
+            </form>
+        </div>
+        <div class="data-group">
+            <strong>Teams</strong>
+            <form method="POST" id=export-teams-form action="/api/admin/export/teams">
+                <input type="text" name="key">
+                <input type="submit" value="Export">
+            </form>
+        </div>
+    </fieldset>
+    <script type=module>
+        import cf from 'https://esm.sh/campfire.js';
+        import cfa from "https://esm.sh/cf-alert";
+
+        const participantCount = document.querySelector("#participant-count");
+        const teamCount = document.querySelector("#team-count");
+        const passwordStatus = document.querySelector("#password-status");
+        const changePasswordLink = document.querySelector("#change-password");
+        const exportParticipantsForm = document.querySelector("#export-participants-form");
+        const exportTeamsForm = document.querySelector("#export-teams-form");
+
+        const onboarding = async () => {
+            await cfa.input("password", "Enter the password to view the dashboard.", "Password required").then(async (password) => {
+                passwordStatus.innerHTML = 'set';
+                localStorage.setItem("password", password);
+                await init(password);
+            }).catch(err => cfa.message(err));
+        }
+
+        const init = async (password) => {
+            const params = new URLSearchParams();
+            params.set("key", password);
+            exportParticipantsForm.querySelector("input[name=key]").value = password;
+            exportTeamsForm.querySelector("input[name=key]").value = password;
+            const res = await fetch("/api/admin/summary", {
+                method: "POST",
+                body: params.toString(),
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                }
+            });
+            if (res.status !== 200) {
+                await cfa.message(res.statusText, "Request Error - reload page to try again");
+            }
+            else {
+                const json = await res.json();
+                participantCount.innerHTML = json.participant_count;
+                teamCount.innerHTML = json.team_count;
+            }
+        }
+
+        window.addEventListener("DOMContentLoaded", async () => {
+            let pass;
+            if (pass = localStorage.getItem("password")) {
+                passwordStatus.innerHTML = 'set';
+                await init(pass);
+            }
+            else {
+                await onboarding();
+            }
+        });
+    </script>
+</body>
+
+</html>
