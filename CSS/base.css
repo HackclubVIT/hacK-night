@@ -315,3 +315,18 @@ section:not(#about):not(.register-now) {
         font-size: 1.6rem;
     }
 }
+
+.largebutton {
+    padding: 1.5rem;
+    font-size: 2rem;
+    color: white;
+    border: 3px solid #F96232;
+    font-family: 'Phantom Sans', sans-serif;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+.largebutton a {
+    color: inherit;
+    text-decoration: none;
+}
